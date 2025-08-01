@@ -4,8 +4,8 @@ const th = document.querySelectorAll('th');
 
 th.forEach((header) => {
   header.addEventListener('click', function (e) {
-    const index = Array.from(th).indexOf(event.target);
-    const table = event.target.closest('table');
+    const index = Array.from(th).indexOf(e.target);
+    const table = e.target.closest('table');
     // Exclude header row
     const rows = Array.from(table.querySelectorAll('tr')).slice(1);
 
